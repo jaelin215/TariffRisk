@@ -1,4 +1,4 @@
-# TariffRisk [Under development]
+# TariffRisk
 
 ## Scalable Machine Learning Service (with Docker, CI/CD, and planned support for Optuna + Airflow)
 
