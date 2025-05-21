@@ -58,7 +58,7 @@ This repo fixes that. It's a blueprint for building and collaborating on real-wo
 🧪 Testing & CI/CD
 	•	pytest for local + CI test runs
 	•	make test to run tests locally
-	•	GitHub Actions triggers CI on push/pull
+	•	GitHub Actions triggers CI on manual workflow run (note: it can be easily changed to triggered by push/pull or scheduled cron job)
 
 ⸻
 
