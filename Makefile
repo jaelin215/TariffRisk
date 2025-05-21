@@ -5,12 +5,12 @@ PYTHONPATH=app
 
 # Install dependencies locally
 install:
-	pip install -r requirements.txt
+	python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
 
 # Run FastAPI app locally
 dev:
-	uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-
+	. .venv/bin/activate && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+	
 # Build Docker image
 build:
 	docker build -t $(IMAGE_NAME) .
