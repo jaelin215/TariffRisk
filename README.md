@@ -15,7 +15,7 @@ This project uses a publicly available dataset sourced from **Kaggle** (https://
 The core motivation is to preprocess and transform this data to build a reliable predictive model for **tariff risk scoring**—helping merchants who sell their merchandise globally through platforms like **Shopify, Amazon**, and other e-commerce marketplaces assess and manage the risk of tariffs.
 
 Beyond just modeling, this repo serves as a template for developing production-ready, scalable ML pipelines around complex, real-world trade compliance challenges faced by online merchants.
-*Note: The prediction of the tariff risk score is not implemented yet and remains a key upcoming milestone for this project.*
+*Note: The realistic prediction of the tariff risk score is not implemented yet and remains a key upcoming milestone for this project. For now, a simple compute was use to demonstrate the capability.*
 
 ---
 
