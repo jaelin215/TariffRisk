@@ -6,3 +6,7 @@ joblib              # To save/load ML models efficiently. Parallel computing usi
 optuna              # Hyperparameter optimization framework for automated ML tuning
 pytest              # Unit testing framework to ensure API logic and ML components work as expected
 httpx               # Support async
+google-cloud-bigquery
+google-cloud-storage
+pandas
+pyyaml
