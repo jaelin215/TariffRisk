@@ -32,19 +32,23 @@ print(f"Downloaded {INPUT_FILE} from GCS to {LOCAL_FILE}")
 df = pd.read_excel(LOCAL_FILE)
 print(f"Loaded {df.shape[0]} rows.")
 
-# TODO: Replace this with your actual feature processing
-# For example, select only columns A, B, and C
-selected_columns = df.columns[:5]  # change this logic
-processed_df = df[selected_columns]
-print(f"Selected columns: {list(selected_columns)}")
-
-# 5. Upload to BigQuery
-table_ref = f"{PROJECT}.{DATASET_ID}.{OUTPUT_TABLE}"
-
-job = bq_client.load_table_from_dataframe(
-    processed_df,
-    table_ref,
-    job_config=bigquery.LoadJobConfig(write_disposition="WRITE_TRUNCATE")  # overwrite table
+# Clean column names to be BigQuery-compliant
+original_columns = df.columns.tolist()
+df.columns = (
+    df.columns
+    .str.strip()
+    .str.lower()
+    .str.replace(r'[^\w]', '_', regex=True)  # replaces non-alphanum with _
+    .str.replace('_+', '_', regex=True)      # collapses multiple underscores
+    .str.strip('_')                          # removes leading/trailing underscores
 )
-job.result()
-print(f"Uploaded {processed_df.shape[0]} rows to {table_ref}")
+print("Loaded", len(df), "rows.")
+print("Selected columns:", df.columns.tolist())
+
+# Upload to BigQuery
+dataset_id = config['dataset'].split(".")[-1]
+table_id = f"{config['project']}.{dataset_id}.{config['output_table']}"
+
+job = bq_client.load_table_from_dataframe(df, table_id)
+job.result()  # Wait for the job to complete
+print(f"✅ Uploaded to {table_id}")
