@@ -1,0 +1,6 @@
+gcp:
+  project: us-tariff-project
+  bucket: us_tariff_bucket
+  input_file: Trump_Tariff_Data.xlsx
+  dataset: tariff_risk_dataset
+  output_table: risk_features

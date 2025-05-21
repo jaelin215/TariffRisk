@@ -22,6 +22,14 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
+# Install Google Cloud SDK
+RUN apt-get update && apt-get install -y curl apt-transport-https gnupg && \
+    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | \
+    tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | \
+    apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
+    apt-get update && apt-get install -y google-cloud-sdk
+
 # Copy all project files
 COPY . .
 
