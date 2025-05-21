@@ -1,8 +1,8 @@
-fastapi
-uvicorn[standard]    # ASGI server to run FastAPI
-scikit-learn
-pandas
-joblib     # To save/load ML models efficiently. Parallel computing using multiple CPU cores (i.e. Parallel, delayed). Faster & more robust than pickle for numpy arrays and scikit-learn models. Ideal for production ML apps using FastAPI.
-optuna     # Hyperparameter tuning
-pytest
-httpx      # Support async
+fastapi             # Web framework for building high-performance, async API endpoints
+uvicorn[standard]   # ASGI server to run FastAPI apps (with optional extras like logging, watchdog)
+scikit-learn        # Machine learning models and preprocessing utilities
+pandas              # Data manipulation and analysis (especially useful for pre/post-processing)
+joblib              # To save/load ML models efficiently. Parallel computing using multiple CPU cores (i.e. Parallel, delayed). Faster & more robust than pickle for numpy arrays and scikit-learn models. Ideal for production ML apps using FastAPI.
+optuna              # Hyperparameter optimization framework for automated ML tuning
+pytest              # Unit testing framework to ensure API logic and ML components work as expected
+httpx               # Support async
