@@ -27,7 +27,7 @@ jobs:
         credentials_json: '${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}'
 
     - name: Run GCP pipeline
-      run: python gcp_pipeline.py
+      run: python pipeline/gcp_pipeline.py
     
     - name: Notify failure
       if: failure()
