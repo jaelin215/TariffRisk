@@ -42,6 +42,12 @@ bash:
 		$(IMAGE_NAME) \
 		bash
 
-# Clean up image
+# Clean up Docker image
 clean:
-	docker rmi $(IMAGE_NAME)
+	-docker rmi $(IMAGE_NAME) || true
+	-docker image prune -f
+
+clean-all:
+	-docker rm -f $(CONTAINER_NAME) || true
+	-docker rmi -f $(IMAGE_NAME) || true
+	-docker system prune -f --volumes

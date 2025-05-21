@@ -1,4 +1,4 @@
-# Predict endpoints
+# socre endpoints
 from fastapi import APIRouter
 from pydantic import BaseModel
 
@@ -8,8 +8,8 @@ class InputData(BaseModel):
     feature1: float
     feature2: float
 
-@router.post("/predict")
+@router.post("/score")
 def predict(data: InputData):
     # Placeholder logic
     result = data.feature1 * data.feature2
-    return {"prediction": result}
+    return {"risk-score": result}
