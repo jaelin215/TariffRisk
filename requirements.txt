@@ -11,3 +11,4 @@ google-cloud-storage
 pandas
 pyyaml
 openpyxl            # For reading .xlsx
+pyarrow             
