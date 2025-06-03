@@ -78,3 +78,6 @@ This repo fixes that. It's a blueprint for building and collaborating on real-wo
 	•	Looker dashboard template + auto-publishing
 	•	GitHub Codespace one-click launch config
 
+---
+
+See a written up version of this project in **Medium** article (https://medium.com/@jaelin_75015/full-stack-ml-pipeline-in-one-github-codespace-docker-fastapi-gcp-cloud-storage-bigquery-a56a6cfbdd19)
