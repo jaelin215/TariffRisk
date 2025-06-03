@@ -60,20 +60,17 @@ This repo fixes that. It's a blueprint for building and collaborating on real-wo
 	•	make test to run tests locally
 	•	GitHub Actions triggers CI on manual workflow run (note: it can be easily changed to triggered by push/pull or scheduled cron job)
 
-⸻
 
 🐳 Containerization
 	•	Full Docker setup with Dockerfile and .dockerignore
 	•	Easily deployable on GCP, AWS, or Azure
 	•	Lightweight dev experience via GitHub Codespaces
 
-⸻
 
 🛠 Dev UX
 	•	Makefile for fast local commands (make run, make test, etc.)
 	•	pyproject.toml to manage formatting (black, isort) and linting in one place
 
-⸻
 
 📌 Coming Soon
 	•	Optuna integration for clean, modular hyperparameter search
@@ -81,18 +78,3 @@ This repo fixes that. It's a blueprint for building and collaborating on real-wo
 	•	Looker dashboard template + auto-publishing
 	•	GitHub Codespace one-click launch config
 
-⸻
-
-💬 Why This Matters
-
-You’re not just showing that you can build ML models.
-You’re showing that you can ship ML products—with reliability, traceability, and confidence.
-
-⸻
-
-🚀 Use This If…
-	•	You’re a solo builder or early team setting up ML ops from scratch
-	•	You want to showcase your ML engineering capability beyond notebooks
-	•	You’re interviewing and want a sharp, practical project to discuss
-
-⸻
